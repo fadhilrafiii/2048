@@ -213,7 +213,7 @@ function App() {
   const handleMove = useCallback(
     (e) => {
       if (!Object.values(MOVE).includes(e.key)) return;
-      if (gameState === "WIN") return;
+      if (gameState === "WIN" || gameState === "LOSE") return;
 
       setGridState((prev) => [...prev, grid]);
       if (e.key === MOVE.RIGHT) handleMoveRight();
